@@ -29,20 +29,25 @@ void insert(int x){
             {
                 ptr = ptr->right;
             }
-            else
-                ptr=ptr->left;
-            }
-        if(temp->data>parent->data){
-                parent->right = temp;
-            }
-        else if(temp->data<parent->data){
-                 parent->left = temp;
-        }
+
+            temp = parent->right;
+        //     else
+        //         ptr=ptr->left;
+        //     }
+        // if(temp->data>parent->data){
+        //         temp = parent->right;
+        //     }
+        // else if(temp->data<parent->data){
+        //     temp = parent->left;
+        // }
         
         }
                 
+    }
+
 
 }
+
 
 
 int main(){
@@ -50,5 +55,5 @@ insert(10);
 insert(40);
 insert(50);
 
-cout<<root->right->right->data;
+cout<<root->right->data;
 }

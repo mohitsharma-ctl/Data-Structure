@@ -21,34 +21,23 @@ void insert(int x){
     }
     else{
         ptr = root;
-        while(ptr)
+        if(temp->data>ptr->data)
         {
-            parent = ptr;
-        
-            if(temp->data>ptr->data)
-            {
-                ptr = ptr->right;
-            }
-            else
-                ptr=ptr->left;
-            }
-        if(temp->data>parent->data){
-                parent->right = temp;
-            }
-        else if(temp->data<parent->data){
-                 parent->left = temp;
+            temp  = ptr->right;
         }
-        
-        }
-                
+    }
+
 
 }
 
 
+
 int main(){
+
 insert(10);
 insert(40);
-insert(50);
+cout<<root->data;
+struct Node *x = root->right;
+cout<<x->data;
 
-cout<<root->right->right->data;
 }
